@@ -4,6 +4,9 @@ class SessionsController < ApplicationController
     end
     
     def create
+        
+        #render text: "POST request. Payload: #{request.body.read}"
+        
         user = User.find_by_email(params[:session][:email])
         if user && user.authenticate(params[:session][:password])
             session[:user_id] = user.id
