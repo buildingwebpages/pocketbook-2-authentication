@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Workspace</title>
+  
+  <link rel="stylesheet" href="https://s3.amazonaws.com/codecademy-content/projects/bootstrap.min.css">
+  <link href='https://fonts.googleapis.com/css?family=Oxygen:300,400,700' rel='stylesheet' type='text/css'>
+  
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  
+</head>
+<body>
+
+<!---------------------Header--------------------->
+<div class="header">
+  <div class="container">
+    <a href="/"><img src="http://s3.amazonaws.com/codecademy-content/projects/pocketbook/logo.svg"></a>
+  </div>
+</div>
+
+<%= yield %>
+
+<!---------------------Footer--------------------->
+<div class="footer">
+  <div class="container">
+    <%= link_to "Contact", '/contact' %>&emsp;
+    <%= link_to "Help Center", '/help' %>&emsp;
+    <%= link_to "About", '/about' %>
+  </div>
+</div>
+
+</body>
+</html>
